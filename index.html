@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenga Music - Sente o Ritmo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar / Navigation -->
+    <aside class="sidebar">
+        <div class="brand">
+            <i class="fa-solid fa-music brand-icon"></i>
+            <h2>Zenga Music</h2>
+        </div>
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Pesquisar artistas, álbuns...">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Início</a></li>
+                <li><a href="#"><i class="fa-solid fa-compass"></i> Explorar</a></li>
+                <li><a href="#"><i class="fa-solid fa-radio"></i> Rádio</a></li>
+            </ul>
+            <h3>Biblioteca</h3>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-clock"></i> Adicionados Recentemente</a></li>
+                <li><a href="#"><i class="fa-solid fa-user-large"></i> Artistas</a></li>
+                <li><a href="#"><i class="fa-solid fa-compact-disc"></i> Álbuns</a></li>
+                <li><a href="#"><i class="fa-solid fa-music"></i> Músicas</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="nav-buttons">
+                <button class="btn-icon"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="btn-icon"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="user-profile">
+                <button class="btn-subscribe">Experimentar Grátis</button>
+                <div class="avatar"><i class="fa-solid fa-user"></i></div>
+            </div>
+
+        </header>
+
+        <!-- Hero Featured Banner -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <span class="badge">DESTAQUE</span>
+                <h1>O Som de Angola & do Mundo</h1>
+                <p>Descubra os novos lançamentos, playlists exclusivas e sucessos da Zenga Music.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" id="heroPlayBtn"><i class="fa-solid fa-play"></i> Ouvir Agora</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Categories / Filters -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Categorias em Destaque</h2>
+            </div>
+            <div class="categories-grid">
+                <button class="category-chip active" data-genre="all">Todos</button>
+                <button class="category-chip" data-genre="kizomba">Kizomba</button>
+                <button class="category-chip" data-genre="semba">Semba</button>
+                <button class="category-chip" data-genre="hiphop">Hip Hop / Rap</button>
+                <button class="category-chip" data-genre="afrobeats">Afrobeats</button>
+            </div>
+
+        </section>
+
+        <!-- Music Catalog Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2>Lançamentos Recentes</h2>
+                <a href="#" class="see-all">Ver tudo</a>
+            </div>
+
+            <div class="cards-grid" id="musicGrid">
+                <!-- Cards renderizados via JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Player Bar (Fixed Bottom) -->
+    <footer class="player-bar">
+        <div class="track-info">
+            <img src="https://via.placeholder.com/60" id="playerThumb" alt="Capa">
+            <div class="track-details">
+                <span id="playerTitle" class="track-title">Selecione uma música</span>
+                <span id="playerArtist" class="track-artist">Zenga Music</span>
+            </div>
+            <button class="btn-icon-subtle"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <div class="player-controls">
+            <div class="control-buttons">
+                <button class="btn-icon-subtle" id="shuffleBtn"><i class="fa-solid fa-shuffle"></i></button>
+                <button class="btn-icon-subtle" id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="btn-play-main" id="playBtn"><i class="fa-solid fa-play"></i></button>
+                <button class="btn-icon-subtle" id="nextBtn"><i class="fa-solid fa-forward-step"></i></button>
+                <button class="btn-icon-subtle" id="repeatBtn"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            <div class="progress-container">
+                <span id="currentTime">0:00</span>
+                <input type="range" id="progressBar" min="0" max="100" value="0">
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" id="volumeBar" min="0" max="100" value="50">
+            <button class="btn-icon-subtle" id="downloadBtn" title="Descarregar"><i class="fa-solid fa-arrow-down-to-line"></i></button>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
