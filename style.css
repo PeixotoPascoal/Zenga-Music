@@ -1,11 +1,11 @@
 /* CSS Reset & Apple Music Theme Variables */
 :root {
-    --bg-main: #141414;
-    --bg-sidebar: #1e1e1e;
+    --bg-main: #535252;
+    --bg-sidebar: #383e3f;
     --bg-card: #252525;
     --bg-card-hover: #303030;
-    --accent-red: #fa2d48;
-    --accent-hover: #ff475d;
+    --accent-red: #f3d2d66c;
+    --accent-hover: #e6ddde46;
     --text-primary: #ffffff;
     --text-secondary: #a1a1a1;
     --border-color: rgba(255, 255, 255, 0.1);
@@ -38,10 +38,17 @@ body {
     border-right: 1px solid var(--border-color);
 }
 
+.logo{
+    width: 60%;
+    filter: invert(2);
+}
+
 .brand {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 12px;
+    padding: 15px;
     margin-bottom: 24px;
     color: var(--accent-red);
 }
@@ -170,7 +177,7 @@ body {
 
 /* Hero Banner */
 .hero-banner {
-    background: linear-gradient(135deg, #fa2d48 0%, #70121e 100%);
+    background: linear-gradient(135deg, #adabab33 0%, #b3929623 100%);
     border-radius: 12px;
     padding: 40px;
     margin-bottom: 32px;
@@ -327,17 +334,24 @@ body {
 /* Player Bar */
 .player-bar {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 10px;
+    left:28%;
+    
+
+    width:  60%;
+    padding: 0 24px;
+
     height: var(--player-height);
-    background: rgba(30, 30, 30, 0.95);
-    backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border-color);
+    background: rgba(236, 229, 229, 0);
+    backdrop-filter: blur(12px);
+    
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
+    
     z-index: 1000;
 }
 
